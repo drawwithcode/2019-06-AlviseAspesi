@@ -24,9 +24,6 @@ function setup() {
   button = createButton("random");
   button.position(windowWidth / 2 - 550, windowHeight / 2 - 10);
   button.mousePressed(randomize);
-  //text
-  //h1 = createElement("h1", "move the sliders and see what happens");
-  //h1.position(windowWidth / 2 - 260, 0);
   //scale control
   sliderSx = createSlider(10, 300, 50, 10);
   sliderSx.position(windowWidth / 2 + 500, windowHeight / 2 - 225);
@@ -49,11 +46,11 @@ function setup() {
   sliderSt.position(windowWidth / 2 + 500, windowHeight / 2 + 225);
   //rgb color background control
   sliderRb = createSlider(0, 255, 125);
-  sliderRb.position(windowWidth / 2 - 200, windowHeight / 2 + 425);
+  sliderRb.position(windowWidth / 2 - 200, windowHeight / 2 + 300);
   sliderGb = createSlider(0, 255, 125);
-  sliderGb.position(windowWidth / 2 - 50, windowHeight / 2 + 425);
+  sliderGb.position(windowWidth / 2 - 50, windowHeight / 2 + 300);
   sliderBb = createSlider(0, 255, 125);
-  sliderBb.position(windowWidth / 2 + 100, windowHeight / 2 + 425);
+  sliderBb.position(windowWidth / 2 + 100, windowHeight / 2 + 300);
 }
 
 function randomize() {
@@ -77,7 +74,7 @@ function draw() {
   stroke(color(random(255), random(255), random(255)));
   strokeWeight(2);
   line(pmouseX, pmouseY, mouseX, mouseY);
-  //ellipse
+  //ellipses
   fill(color(sliderR.value(), sliderG.value(), sliderB.value()));
   stroke(strokeC);
   strokeWeight(sliderSt.value());
